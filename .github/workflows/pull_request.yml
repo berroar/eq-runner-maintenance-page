@@ -18,8 +18,8 @@ jobs:
         name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider:
-          service_account:
+          workload_identity_provider: projects/402842958223/locations/global/workloadIdentityPools/github-2/providers/my-repo
+          service_account: github-service@rhys-staging-2024-05-03.iam.gserviceaccount.com
       - name: Set Tag and SHA
         run: |
           CLEAN_TAG=$(echo "${{ github.event.pull_request.head.ref }}" | tr / -)
