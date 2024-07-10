@@ -32,4 +32,4 @@ jobs:
         run: |
           gcloud auth configure-docker ${{ secrets.GAR_LOCATION }}
           echo "Pushing to GAR with tag $TAG"
-          docker push ${{ secrets.GAR_LOCATION }}/${{ secrets.GAR_PROJECT_ID }}/test/eq-runner-maintenance-page:rhys-image
+          docker push ${{ secrets.GAR_LOCATION }}/${{ secrets.GAR_PROJECT_ID }}/eq-runner-maintenance-page:rhys-image
